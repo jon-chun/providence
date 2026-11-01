@@ -1,0 +1,1167 @@
+ ▐▛███▛█   Claude Code v2.1.312
+▝▜██████▀  Opus 5.5 · Claude Max
+ ▝▝   ▝▝   ~/code/providence
+
+
+❯ is the GLAM produce in this providence/ subdir collectiveaccess or dspace or  
+  something else?                                                               
+
+⏺ User answered Claude's questions:
+  ⎿  · The orchestrator gate is active: this session runs on Opus 5.5, not Fable
+     5.1. How do you want to proceed? → Keep Opus 5.5
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Confirmed: this session runs on Opus 5.5.
+
+  It's CollectiveAccess, not DSpace. Specifically it's Providence 2.0.11, the
+  back-end cataloguing app of CollectiveAccess. It's written in PHP, and its
+  README begins "README: Providence version 2.0.11 / About CollectiveAccess".
+  Pawtucket2 is the public-facing front end, and it lives in a separate repo.
+
+  The recent commits are merges from it-at-m (Munich city IT) with KULTMMS-*
+  ticket IDs. So your fork (jon-chun/providence) most likely follows Munich's
+  fork of CollectiveAccess rather than upstream collectiveaccess/providence
+  directly.
+
+✻ Baked for 13s · done Thursday 7:13 PM
+
+❯ 1. GOAL: create a canonical set of UI/UX design, user, tech, ADR, wireframe,  
+  etc. that completely, comprehensively, concretely and in specific details     
+  document the UI/UX fuctional organization, webpage hierarchy, workflow, etc   
+  for this GLAM webapp using copious clear illustrations, diagrams, flow        
+  charts, figures, etc.                                                         
+  2. OUTPUT: save the results in the subdir /Users/jonc/code/archival-intellige 
+  nce-ai-v2-dev/docs/competitors/collectiveaccess/                              
+  3. EXECUTION: Do not stop until you have completed the task. Use any          
+  combination of upto 6 parallel top-level orchestration agents where possible  
+  to speed execution. Each orchestration agent should try to decompose and      
+  delegate coherent substasks to sufficiently capable subagents in parallel     
+  (unto 10 parallel subagents)                                                  
+
+  Ran 5 shell commands (ctrl+o to expand)
+
+⏺ I'm aligning the CollectiveAccess docs with the ArchivesSpace/Omeka S UI-docs
+  conventions other sessions set up today, then I'll dispatch six leads.
+
+  Ran 3 shell commands (ctrl+o to expand)
+
+⏺ Writing the common brief and tooling for CollectiveAccess.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Write(~/code/glam-rev-eng/collectiveaccess/ui-docs/_tools/BRIEF-COMMON.md)
+  ⎿  Wrote 118 lines to
+     ~/code/glam-rev-eng/collectiveaccess/ui-docs/_tools/BRIEF-COMMON.md
+      1 # Common brief: CollectiveAccess Providence UI/UX design document
+        ation set (2026-10-29)
+      2 
+      3 Every lead and every subagent reads this file in full before star
+        ting. It is the single source of conventions; the per-lead brief 
+        only adds scope. It mirrors the ArchivesSpace and Omeka S sets wr
+        itten the same day (`APP/docs/competitors/archivesspace/ui-design
+        -docs/`, `APP/docs/competitors/omekas/ui-design-docs/`) so the th
+        ree compare section by section.
+      4 
+     … +114 lines (ctrl+o to expand)
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Dispatching the six leads now.
+
+⏺ 6 background agents launched (↓ to manage)
+   ├ @ca-ia (lead-fable)
+   ├ @ca-users (lead-fable)
+   ├ @ca-workflows (lead-fable)
+   ├ @ca-screens (lead-fable)
+   ├ @ca-config (lead-fable)
+   └ @ca-tech (lead-fable)
+
+⏺ All six leads are running. While they work I'm drafting
+  00-legend-and-method.md.
+
+⏺ Bash(cat /Users/jonc/code/archival-intelligence-ai-v2-dev/docs/competitors/ome
+      kas/ui-design-docs/00-legend-and-method.md; cat
+      /Users/jonc/code/archival-intelligence-…)
+  ⎿  # Legend and method
+
+     Sources: `application/config/routes.config.php`, `application/config/n
+     … +101 lines (ctrl+o to expand)
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+⏺ Bash(cd ~/code/providence; grep -n "define" app/version.php; cat
+      /Users/jonc/code/archival-intelligence-ai-v2-dev/docs/competitors/collecti
+      veaccess/LICENSE-NOTE.md;…)
+  ⎿  3:define('__CollectiveAccess__', '2.0');
+     6:define('__CollectiveAccess_Version__', '2.0.12');
+     9:define('__CollectiveAccess_Schema_Rev__', 213);
+     … +15 lines (ctrl+o to expand)
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+⏺ Bash(D=/Users/jonc/code/archival-intelligence-ai-v2-dev/docs/competitors/colle
+      ctiveaccess/ui-design-docs
+      cat > $D/figures/f00-03-method-pipeline.mmd <<'EOF'…)
+  ⎿  OK   /Users/jonc/code/archival-intelligence-ai-v2-dev/docs/competitors
+     /collectiveaccess/ui-design-docs/figures/f00-01-diagram-notation.svg
+     OK   /Users/jonc/code/archival-intelligence-ai-v2-dev/docs/competitors
+     … +5 lines (ctrl+o to expand)
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+⏺ Write(~/code/archival-intelligence-ai-v2-dev/docs/competitors/collectiveaccess
+       /ui-design-docs/00-legend-and-method.md)
+  ⎿  Wrote 108 lines to ~/code/archival-intelligence-ai-v2-dev/docs/competi
+     tors/collectiveaccess/ui-design-docs/00-legend-and-method.md
+      1 # Legend and method
+      2 
+      3 Sources: `app/version.php`, `index.php`, `service.php`, `app/conf
+        /navigation.conf`, `themes/default/views/`, `install/profiles/` ·
+         Clone commit 66dc6de9b · Confidence: high
+      4 
+      5 This file explains how the CollectiveAccess Providence UI/UX docu
+        mentation set was produced, how to read its citations, figures an
+        d wireframes, and how far each kind of claim can be trusted. Read
+         it before any section.
+     … +103 lines (ctrl+o to expand)
+
+⏺ 00-legend-and-method.md and its figures are written. I'll wait for the six
+  leads to report; each one notifies when it finishes.
+
+❯ URGENT: save intermediate work to minimize data loss in case of interruption  
+  (mins to hours) then continue                                                 
+
+⏺ Bash(D=/Users/jonc/code/archival-intelligence-ai-v2-dev/docs/competitors/colle
+      ctiveaccess/ui-design-docs;
+      R=/Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs; d…)
+  ⎿  Thu Oct 29 19:26:22 EDT 2026
+     01-information-architecture: md=       1 svg=       0
+     02-users-roles-permissions: md=       2 svg=       0
+     … +15 lines (ctrl+o to expand)
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+⏺ Bash(cat > /Users/jonc/code/archival-intelligence-ai-v2-dev/docs/handoffs/2026
+      -10-29_1927_collectiveaccess-ui-design-docs-checkpoint1-claude.md <<'EOF'
+      # Handoff: co…)
+  ⎿  ok
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+⏺ Saving the six lead scopes to a file as well, so a lost lead can be
+  re-dispatched without needing this transcript.
+
+⏺ Bash(cat > /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/_tools/LEAD-
+      SCOPES.md <<'EOF'
+      # Lead scopes (CollectiveAccess UI docs, 2026-10-29) — for re-dispatc…)
+  ⎿  saved
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+  ⎿  You've hit your 5-hour limit · resets 11:30pm (America/New_York)
+     /usage-credits to finish what you’re working on.
+⏺ Remote Control disconnected — signed-in claude.ai account or 
+  organization changed on this machine — run /remote-control to start a 
+  session for the current account, or /login to switch back, then 
+  /remote-control
+
+❯ /remote-control 
+
+❯ continue and have each sub/agent periodically save their work to minize data  
+  loss in case of interruptions                                                 
+  ⎿  1 skill available
+
+⏺ User answered Claude's questions:
+  ⎿  · The orchestrator gate is active again: it recorded the model as 
+     "<synthetic>" (the usage-limit placeholder), not Fable 5.1, even though you
+     kept Opus 5.5 earlier. How do you want to proceed? → Keep current model
+
+⏺ Remote Control disconnected — signed-in claude.ai account or 
+  organization changed on this machine — run /remote-control to start a 
+  session for the current account, or /login to switch back, then 
+  /remote-control
+  ⎿  5 skills available
+  ⎿  Found 30 new diagnostic issues in 4 files (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Confirmed: this session runs on Opus 5.5. Now sending the save-often
+  instruction to all six leads.
+
+⏺ Your usage limit has been reached, so I've stopped here. The six leads are
+  still running and they have the new save-often rule.
+
+  Done:
+  - Gate: confirmed again; this session stays on Opus 5.5.
+  - Save-often rule: sent to all six leads (ca-ia, ca-users, ca-workflows,
+    ca-screens, ca-config, ca-tech). Each lead must:
+    - rewrite its LEDGER.md after every finished file or batch of figures;
+    - write files to disk as it goes;
+    - have its subagents save partial output at each major step;
+    - write a CHECKPOINT.md about every 30–45 minutes, under
+      /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/<lead>/.
+  - Saved earlier:
+    - the shared conventions file and the render script (it renders all five
+      overview figures without errors);
+    - the nine section folders under
+      docs/competitors/collectiveaccess/ui-design-docs/;
+    - 00-legend-and-method.md and its five figures.
+  - Recovery files:
+    - every lead's scope, so any lead can be restarted: /Users/jonc/code/glam-re
+      v-eng/collectiveaccess/ui-docs/_tools/LEAD-SCOPES.md;
+    - the plan and checkpoint handoffs: docs/handoffs/2026-10-29_1925_collective
+      access-ui-design-docs-plan-claude.md and …_1927_…-checkpoint1-claude.md.
+  - Clone: ~/code/providence has no changes.
+
+  Left:
+  1. The six leads finish their sections. When I last checked, each section had
+     only its README draft; their progress since then hasn't been checked.
+  2. When they report: check two facts per lead against the clone, re-render
+     every figure, run node scripts/check.mjs, and confirm the clone is still
+     clean.
+  3. Write the top-level README.md (reading order, section index, figure index)
+     and a completion handoff.
+
+  If this session is lost, restart from the checkpoint handoff. Any lead without
+  a report in reports/lead-fable_collectiveaccess-ui-<lead>_20261029.md gets
+  restarted from LEAD-SCOPES.md and its own LEDGER.md. Nothing is committed.
+
+
+⏺ Teammate @ca-users failed: You've hit your 5-hour limit · resets 9:50pm 
+(America/New_York)
+  Now the shared subagent brief, then all nine dispatches in one message.
+
+⏺ Teammate @ca-tech failed: You've hit your 5-hour limit · resets 9:50pm 
+(America/New_York)
+  Now I'll dispatch wave 1: ten subagents in parallel with disjoint file
+  ownership (four worker-sonnet for section 06, two worker-opus and four
+  worker-sonnet for section 08).
+
+⏺ Teammate @ca-config failed: You've hit your 5-hour limit · resets 9:50pm 
+(America/New_York)
+  Now the ledger, and the seven drafting dispatches in parallel (each owns
+  disjoint files and figure numbers).
+
+⏺ Teammate @ca-ia failed: You've hit your 5-hour limit · resets 9:50pm 
+(America/New_York)
+  Doc 04 is written with its three figures rendered. Let me checkpoint the
+  ledger and inspect the scouts' table formats so I can assemble the menu
+  inventory (doc 02) mechanically from their evidence.
+
+⏺ Teammate @ca-screens failed: You've hit your 5-hour limit · resets 9:50pm 
+(America/New_York)
+  Skeleton, plan, ledger and shared brief are written. Now I'll dispatch all ten
+  workers in parallel, each with disjoint files and figure ranges.
+
+⏺ Teammate @ca-workflows failed: You've hit your 5-hour limit · resets 9:50pm 
+(America/New_York)
+  Setup is done. Dispatching the ten drafting workers in parallel, each with
+  disjoint file ownership, pre-assigned figure IDs and a named report path.
+
+⏺ Bash(date; D=/Users/jonc/code/archival-intelligence-ai-v2-dev/docs/competitors
+      /collectiveaccess/ui-design-docs;
+      R=/Users/jonc/code/glam-rev-eng/collectiveaccess/ui-d…)
+  ⎿  Thu Oct 29 20:10:05 EDT 2026
+     01-information-architecture: md=       3 svg=      12
+     02-users-roles-permissions: md=       3 svg=       9
+     … +47 lines (ctrl+o to expand)
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ CronCreate(57 21 29 10 *: Resume the CollectiveAccess UI design-docs run: the
+            usage l…)
+  ⎿  Scheduled 4e1bd628 (57 21 29 10 *, next run Thursday 9:57 PM)
+
+⏺ The six leads have all stopped: each one hit the 5-hour usage limit at 8:02pm,
+  and the limit resets at 9:50pm. I've scheduled a one-shot resume in this
+  session for 9:57pm tonight. It will tell each lead to read its ledger and
+  plan, check which of its files are already on disk, and carry on from there
+  with the save-often rule. Any lead that can't be resumed gets restarted from
+  LEAD-SCOPES.md. The resume only fires while this Claude session stays open.
+
+  Saved on disk so far (topic files / figures and wireframes per section):
+
+  ┌─────────────────────────────────┬─────┬──────┐
+  │             Section             │ .md │ .svg │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 01 Information architecture     │ 3   │ 12   │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 02 Users, roles, permissions    │ 3   │ 9    │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 03 Cataloguing workflows        │ 4   │ 8    │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 04 Screens and wireframes       │ 3   │ 17   │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 05 Configurable UI and profiles │ 5   │ 8    │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 06 Visual design system         │ 4   │ 2    │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 07 Accessibility and i18n       │ 2   │ 2    │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 08 Technical architecture       │ 3   │ 3    │
+  ├─────────────────────────────────┼─────┼──────┤
+  │ 09 ADRs                         │ 1   │ 0    │
+  └─────────────────────────────────┴─────┴──────┘
+
+  Each lead's ledger, plan and partial notes are in
+  /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/<lead>/. A new
+  checkpoint handoff is docs/handoffs/2026-10-29_2012_collectiveaccess-ui-design
+  -docs-checkpoint2-claude.md; it records where each lead stopped and how to
+  resume by hand if this session closes. The Providence clone has no changes,
+  and nothing is committed.
+
+  Most leads stopped just before dispatching their main batch of drafting
+  subagents, so most of the writing is still to do. The ia lead is furthest
+  along. After the resume I'll check the leads' reports, re-render every figure,
+  run check.mjs, and write the top-level README.md with a figure index.
+
+※ recap: We're building the CollectiveAccess Providence UI/UX design-doc set; all six leads stopped at the usage limit with partial work saved. The next step is the scheduled 9:57pm resume, which tells each lead to continue from its ledger. (disable recaps in /config)
+
+
+⏺ Teammate @ca-ia finished
+  Section 01 (information architecture) for CollectiveAccess Providence is
+  complete and verified.
+
+  Deliverables in /Users/jonc/code/archival-intelligence-ai-v2-dev/docs/competit
+  ors/collectiveaccess/ui-design-docs/01-information-architecture/: README plus
+  eight topic files (41,176 words, 1,216 table rows, 767 path:line citations, 49
+  [inferred] marks), and 19 figures in figures/ (18 Mermaid sources rendered to
+  SVG, one hand-drawn editor-navigation wireframe with 12 callouts).
+  Highlights: the full 439-node navigation.conf inventory with verbatim
+  requirements, the URL grammar and dispatch rules read from
+  RequestDispatcher.php/AppNavigation.php (including the left-to-right requires
+  semantics), the 172-controller page inventory, the result-context mechanism
+  behind previous / Results (n/m) / next, and the four hierarchy models by
+  table.
+
+  Verification (all run): render.sh 18 OK / 0 FAIL; xmllint 0 bad over 19 SVGs;
+  check.mjs 0 failures in this section (249 elsewhere, all missing cross-links
+  in other competitors' sets being written in parallel, reported not fixed);
+  clone git status empty; 37 figure references resolve; fences balanced.
+
+  Process note: the account hit the 5-hour API limit ~19:35 EDT. Scouts A–D
+  finished (18 of their cited lines re-checked against the clone, all matched);
+  scout E was cut off and F, G, J and both Opus workers never ran. Rather than
+  wait for the 23:30 reset, I produced the remaining evidence mechanically
+  (grep/awk/python) and wrote docs 04 and 05 from first-hand code reading.
+  Ledger, checkpoint, evidence and partials persist under
+  /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/ia/.
+
+  Open issues (in the report): runtime effect of the syntax anomalies in
+  navigation.conf, the dead objects/cataloguing/Basic/Edit default target, the
+  four import-plugin menu hooks and relationship-row JavaScript not read.
+
+  /Users/jonc/code/archival-intelligence-ai-v2-dev/reports/lead-fable_collective
+  access-ui-ia_20261029.md
+
+⏺ Bash(cd ~/code/providence; find app/controllers -name '*Controller.php' | wc
+      -l; grep -n "requires" app/lib/AppNavigation.php | head -5;
+      D=/Users/jonc/code/archival-…)
+  ⎿  172
+     188:                                            if
+     (isset($va_node['submenu']['requires'])) {
+     189:
+     $vb_submenu_set = $this->_evaluateRequirements($va_node['submenu']
+     … +19 lines (ctrl+o to expand)
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+  ⎿  Found 5 new diagnostic issues in 2 files (ctrl+o to expand)
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Section 01 (information architecture) is finished. The lead kept working
+  through the usage limit by building its remaining evidence with scripts (grep,
+  awk, Python) instead of subagents. It delivered eight topic files and 19
+  figures (18 Mermaid diagrams plus one hand-drawn wireframe). Its own checks
+  all passed: every figure renders, check.mjs reports no failures in this
+  section, and the clone is clean.
+
+  I checked two of its claims against the clone myself, and both hold:
+  - There are 172 controller files.
+  - The dispatch line it cites, index.php:137, is the one that dispatches the
+    request.
+
+  The other five leads (users, workflows, screens, config, tech) are still
+  stopped by the limit. The scheduled resume at 9:57pm will restart them, and
+  then I'll integrate everything.
+
+
+⏺ Teammate @ca-workflows failed: You've hit your 5-hour limit · resets 1am 
+(America/New_York)
+  ⎿  You've hit your 5-hour limit · resets 1am (America/New_York)
+     /usage-credits to finish what you’re working on.
+
+
+⏺ Teammate @ca-config failed: You've hit your 5-hour limit · resets 1am 
+(America/New_York)
+  All four spot-checks hold. Now I'll write doc 01 in two parts and render its
+  figures.
+
+⏺ Teammate @ca-users failed: You've hit your 5-hour limit · resets 1am 
+(America/New_York)
+  Assembling 02/07 and verifying the lines I cited from memory, and in parallel
+  writing the preferences generator (its effect map comes from the getPreference
+  usage scan already read).
+
+⏺ Teammate @ca-tech failed: You've hit your 5-hour limit · resets 1am 
+(America/New_York)
+  I have what I need for 08-09 and 08-10. Writing both docs and their two
+  Mermaid sources now; rendering follows.
+
+⏺ Teammate @ca-screens failed: You've hit your 5-hour limit · resets 1am 
+(America/New_York)
+
+✻ Running scheduled task (Oct 29 10:08pm)
+  ⎿  Found 20 new diagnostic issues in 2 files (ctrl+o to expand)
+
+⏺ CronDelete(4e1bd628)
+  ⎿  Error: No scheduled job with id '4e1bd628'
+
+⏺ CronCreate(7 1 30 10 *: Resume the CollectiveAccess UI design-docs run: the
+            usage l…)
+  ⎿  Scheduled 00db8890 (7 1 30 10 *, next run 1:07 AM)
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ The other five leads (users, workflows, screens, config, tech) got further,
+  then hit the 5-hour limit again at about 8:40pm. The new reset is 1am, so I
+  moved the automatic resume to 1:07am on Oct 30. The 9:57pm job is gone, so
+  nothing will fire before the reset. As before, the resume only fires while
+  this Claude session stays open.
+
+  Section 01 (information architecture) is finished and checked, so the resume
+  restarts only the other five leads. Each one will pick up from its ledger and
+  the files it has already saved. I've added this to the checkpoint handoff
+  (docs/handoffs/2026-10-29_2012_collectiveaccess-ui-design-docs-checkpoint2-cla
+  ude.md), in case the resume has to be done by hand.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The scheduled 9:57pm job fired after all; deleting it had failed earlier. It's
+  10:08pm, before the leads' 1am reset, so I'm trying one lead first rather
+  than all five.
+
+⏺ I sent ca-users a test resume. If it gets through without hitting the limit,
+  I'll resume the other four leads. If it fails, the 1:07am job will restart all
+  five once the limit resets.
+
+
+⏺ Teammate @ca-users failed: You've hit your weekly limit · resets Nov 3 at 2pm 
+(America/New_York)
+  Now writing 02/06 in full (prose, generated tables, figure, wireframe), then
+  assembling and rendering in one pass.
+  ⎿  You've hit your weekly limit · resets Nov 3 at 2pm (America/New_York)
+     /usage-credits to finish what you’re working on.
+
+⏺ Held peer message — from uds:/tmp/cc-socks/15731.sock [verified pid 
+  15731] (peer claims name: archivesspace-c1); preview: «Config change 
+  from the user, relayed by the archivesspace session: 
+  ~/.claude/CLAUDE.md changed today. Read it now with t» …[1 line, 453 
+  chars total — expand to review before approving] — not delivered to 
+  Claude (1 held). The sending session's permission mode class doesn't 
+  match this session's. Review it below, or set "crossSessionInbound" to
+  "accept".
+
+✻ Running scheduled task (Oct 30 3:37am)
+
+⏺ Released 1 held cross-session message to Claude's queue (you approved 
+  it).
+
+  Ran 1 shell command (ctrl+o to expand)
+
+@ archivesspace-c1❯
+  Config change from the user, relayed by the archivesspace session:
+  ~/.claude/CLAUDE.md changed today. Read it now with the Read tool. Its "Model
+  and cost policy" section replaces the old "Model orchestration hierarchy"
+  (Fable gate) section and overrides what you loaded at startup. From now on:
+  name model and effort on every Agent dispatch, at or below this session's; no
+  lead-fable (disabled); about 3 concurrent subagents by default. No reply
+  needed.
+  ⎿  1 skill available
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Skill(orchestration-tiers)
+  ⎿  Successfully loaded skill
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Since Fable leads are blocked until Nov 3 and lead-fable agents are disabled,
+  I'll take over the remaining work directly using up to three worker-sonnet
+  agents at a time, each on disjoint directories without git ops or worktrees.
+  Wave 1 will cover users+workflows, config, and tech 06/08; Wave 2 will handle
+  screens and the ADRs.
+
+⏺ 3 background agents launched (↓ to manage)
+   ├ @ca-finish-users-workflows (worker-sonnet)
+   ├ @ca-finish-config (worker-sonnet)
+   └ @ca-finish-tech (worker-sonnet)
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Wave 1 is running (users+workflows, config, tech 06/08), and I've written
+  checkpoint 3 to docs/handoffs/2026-10-30_0345_collectiveaccess-ui-design-docs-
+  checkpoint3-claude.md. Wave 2 (screens, then the ADRs) starts once these
+  finish.
+※ recap: I'm building the CollectiveAccess Providence UI/UX design doc set; section 01 is done and three Sonnet workers are finishing sections 02, 03, 05, 06, 07 and 08. Next, I'll dispatch workers for the screens/wireframes section and the ADRs. (disable recaps in /config)
+
+
+⏺ Teammate @ca-finish-config finished
+  Section 05 is finished: every listed file is done and the README is complete.
+  The Providence clone is untouched, and nothing was committed, pushed or
+  installed. Verification passes for section 05, but check.mjs still exits 1
+  because of 42 failures in other sections.
+
+  What changed
+  - 02-user-interfaces-screens-placements.md: added §5 (the admin screens for
+    editing User interfaces, Screens and placements) and §6 findings.
+  - 03-metadata-elements-and-attribute-types.md: it was already complete (§3.5
+    is full, findings and open questions present). I re-checked three facts and
+    left it as it was.
+  - 04-display-templates.md: I resolved the open questions on <t>,
+    <whenunitomits> and the ~ modifiers. One finding: the shipped thumbnail
+    caption writes %truncate=27&ellipsis=1, but the only truncation code reads
+    the colon form, so that default may do nothing. I marked this UNVERIFIED.
+  - 05-bundle-displays-and-search-forms.md: §4.7 was already complete. I added
+    §5 findings and open questions.
+  - 07-worked-example-object-editor.md: new. The profile is "[Example] Visual
+    resources collection" (install/profiles/xml/default.xml, UI objects_ui).
+    Figures are f05-14 and the hand-drawn wireframe
+    f05-15-wf-object-editor-basic-info.svg.
+  - 08-findings.md: new, with f05-16 (the power-versus-burden quadrant).
+  - README.md: completed with the contents table, the 16-figure index and the
+    key findings.
+  - 01-installation-profiles.md and 06-app-conf-ui-switches.md: checked against
+    the scope and spot-checked; neither needed changes.
+
+  The section is 47,298 words and 16 figures.
+
+  Verification (run in the foreground, one at a time)
+  1. render.sh on the section's figures: all 15 Mermaid renders OK.
+  2. xmllint --noout on all 16 SVGs: no BAD output.
+  3. node scripts/check.mjs: status "failed", exit 1, 42 failures, none
+     mentioning 05-configurable-ui-and-profiles. They sit in other
+     collectiveaccess sections, dspace and omekas, which I did not touch.
+  4. git -C /Users/jonc/code/providence status --short | wc -l: 0.
+  5. Every embedded figure path resolves and every .mmd has its .svg; code
+     fences in section 05 are balanced.
+
+  Open issues
+  - Nothing was run, so behaviour that depends on run-time state is marked
+    [inferred] or UNVERIFIED.
+  - Two findings rest on the absence of a check, found by grep only and not
+    tested. Screen access is not enforced on save (02 finding 6).
+    can_use_ca_bundle_displays is never checked in PHP (05 finding 5).
+  - I corrected one error as I went: "Administration" is nested under the Manage
+    menu, not a top-level menu, in both the wireframe and 02 §5.1.
+  - I did no critique pass on 01 and 06 beyond the scope check and spot-checks,
+    and no web cross-check.
+
+  The lead report, with files, words, figures, verification output and open
+  issues, is at:
+  /Users/jonc/code/archival-intelligence-ai-v2-dev/reports/lead-fable_collective
+  access-ui-config_20261029.md
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Section 05 checks out—the worked example profile is confirmed at default.xml:3
+  with objects_ui at line 3052, and the thumbnail caption templates use
+  %truncate=27&ellipsis=1 in app.conf:1073. Moving on to the first half of
+  section 04 (screens) now.
+
+⏺ worker-sonnet(CA screens part A) Sonnet 5.5
+
+⏺ Screens part A is running alongside the users+workflows and tech workers. When
+  the next slot frees up, I'll start screens part B (files 10–15, the screen
+  inventory and the README) and then the ADRs.
+
+
+@ ca-screens-a❯ Request extra figure number range
+  Figure-number shortfall for CA screens part A.
+
+  Free numbers inside my f04-20..59 range are only 33-36 and 57-59. That is 7
+  numbers. I need about 11 new wireframes for shell, login, dashboard, widgets,
+  media and batch. Figures 19-32 already exist from the earlier editor work.
+
+  I will use 33-36 and 57-59 first. If you want to avoid collisions I propose
+  also f04-01..18 and f04-60..68, which the plan allotted to shell/dashboard and
+  media/batch and which nobody uses now. I will start using those if I hear no
+  objection. Please reply only if you object.
+
+  Listed 1 directory (ctrl+o to expand)
+
+⏺ Screens part A asked for more figure numbers. I gave it the free 33–36 and
+  53–59 plus f04-01–18, and kept f04-60 and above for part B so the two halves
+  can't collide.
+
+※ recap: We're writing the CollectiveAccess Providence UI/UX documentation set; sections 01 and 05 are done and four Sonnet workers are finishing the rest. Next: once a slot frees up, start screens part B, then the ADRs. (disable recaps in /config)
+
+⏺ Held peer message — from uds:/tmp/cc-socks/15731.sock [verified pid 
+  15731] (peer claims name: archivesspace-c1); preview: «From the user, 
+  relayed by the archivesspace session: ONLY act on this if THIS session
+  owns this products UI/UX documenta» …[3 lines, 558 chars total — 
+  expand to review before approving] — not delivered to Claude (1 held).
+  The sending session's permission mode class doesn't match this 
+  session's. Review it below, or set "crossSessionInbound" to "accept".
+
+⏺ Released 1 held cross-session message to Claude's queue (you approved 
+  it).
+
+@ archivesspace-c1❯
+  From the user, relayed by the archivesspace session: ONLY act on this if THIS
+  session owns this product's UI/UX documentation work (ui-design-docs /
+  ~/code/glam-rev-eng/<slug>/ui-docs). If you are the other session for this
+  product (e.g. the Phase 1 reverse-spec session), do nothing and do not reply.
+
+  The prompt to follow is the file
+  ~/code/glam-rev-eng/_tools/PROMPT_finish-ui-docs-low-cost.md — read it with
+  the Read tool and carry it out exactly (it ends with you showing the user the
+  filled RUN.md and the claude-run --dry-run output, then stopping).
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ This session owns the CollectiveAccess UI docs, so I'll carry out the low-cost
+  prompt. Step 1 is to pause the running workers.
+
+⏺ Bash(cat ~/code/theailab-net-dev/dev/patches_claude-config_20261030/templates/
+      RUN.md; echo "#####"; wc -l
+      ~/code/glam-rev-eng/archivesspace/ui-docs/RUN.md; ls ~/code…)
+  ⎿  ---
+     mode: autonomous          # attended | autonomous
+     hitl: defer               # ask | defer  (defer: questions go to QUEST
+     … +44 lines (ctrl+o to expand)
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ While the three workers save and stop, I'm writing the script that builds the
+  state table.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Bash(head -40 ~/code/glam-rev-eng/_tools/wireframe.py; cat
+      ~/code/glam-rev-eng/_tools/render.sh)
+  ⎿  #!/usr/bin/env python3
+     """wireframe.py: turn a compact JSON spec into a low-fidelity SVG wire
+     frame in the house style
+     … +45 lines (ctrl+o to expand)
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+⏺ The state script is ready, and I've read the format of the shared wireframe
+  generator. I'm waiting for the three workers to confirm they've paused, so the
+  state table reflects their final saves.
+
+※ recap: You asked for CollectiveAccess UI/UX design docs; sections 01 and 05 are done, and I'm switching the rest to a cheaper scripted run. Next, once the three paused workers confirm, I'll write the run spec and show you its dry run.
+
+
+⏺ Teammate @ca-finish-users-workflows finished
+  All three sections (02, 07, 03) are now complete. Five of the six verification
+  checks pass; check.mjs still exits 1, with no failure under my sections.
+
+  Verification
+  - Render: render.sh printed 18 OK for 02, 6 OK for 07 and 28 OK for 03, with
+    no FAIL. The 03 run went past the shell time limit and finished in the
+    background, so I read its saved output.
+  - SVG validity: xmllint --noout on every SVG was clean.
+  - check.mjs: it exits 1 because of other sections and competitors. No failure
+    line names any of my three sections. I did not fix the others.
+  - Clone: git -C /Users/jonc/code/providence status --short | wc -l printed 0.
+  - Embedded figures: all 40 references in 02, 13 in 07 and 56 in 03 resolve.
+    Every .mmd has an .svg, every SVG is referenced from a topic file, and fence
+    counts are even.
+
+  Written or finished
+  - 02:
+    - New 02-authentication-ux.md (nine routes, adapters, session).
+    - 03-permission-model.md replaced the 105-word stub. It has a class diagram,
+      a bundle-access flowchart, a dispatcher sequence, a
+      screen-by-required-action matrix and the full 155-key
+      access_restrictions.conf table.
+    - README completed.
+  - 07: README completed; the three topic files were already done.
+  - 03:
+    - Written fresh:
+      - 01-workflow-catalogue.md
+      - 10-collections-management.md
+      - 12-findings.md
+    - Finished (the earlier workers had stopped partway):
+      - 05-relationships.md
+      - 06-media.md (it had no figures)
+      - 07-batch.md (it was Workflow 1 only; Workflows 2–6 are new)
+      - 09-sets.md
+      - 11-workflow-state-and-publishing.md (including the record lifecycle
+        state diagram)
+    - README completed.
+    - 02-create-record.md was already complete, so I left it alone.
+  - Totals:
+
+  ┌─────────┬────────┬─────────┐
+  │ Section │ Words  │ Figures │
+  ├─────────┼────────┼─────────┤
+  │ 02      │ 52,432 │ 22      │
+  ├─────────┼────────┼─────────┤
+  │ 07      │ 28,116 │ 7       │
+  ├─────────┼────────┼─────────┤
+  │ 03      │ 54,208 │ 28      │
+  └─────────┴────────┴─────────┘
+
+  Fixes along the way
+  - The existing figures f02-10 to f02-12 had never been rendered. f02-11 had a
+    Mermaid syntax error, which I fixed. f02-10 wrongly listed can_not_login (a
+    Pawtucket-only check) as part of Providence login, so I corrected it.
+  - My first f02-15 showed an administrator bypass at every layer. I checked it
+    against the clone and corrected it to bypass ACL only.
+  - My first draft of 09-sets.md said the media ZIP has no UI control; the
+    evidence file had already retracted that, so I corrected it.
+  - Two library and home-location citations in 10-collections-management.md were
+    off by one line; fixed.
+  - The ca_metadata_alert_* and notifications evidence did not exist, so I read
+    it from the clone myself.
+
+  Not done
+  - Nothing was run; this is all read from the code.
+  - I did not scan profiles other than default.xml and base.xml.
+  - I did not re-check every citation in the earlier workers' finished files.
+  - The notifications section in file 10 is thin: I did not read
+    ca_notifications beyond the widget, controller and plugin.
+  - The "frequency" column and the "about N" step counts in the catalogue are my
+    judgement or my count of the step tables, and are marked as such.
+
+  I updated both LEDGER.md files, added a final-status section to the existing
+  workflows lead report, and wrote
+  lead-fable_collectiveaccess-ui-users_20261029.md.
+
+  /Users/jonc/code/archival-intelligence-ai-v2-dev/reports/worker-sonnet_collect
+  iveaccess-ui-finish-users-workflows_20261030.md
+
+⏺ Bash(cd ~/code/providence; grep -rln "can_not_login" app/ | head -5; grep -cE
+      "^\s*[a-z_]+ *= *\{" app/conf/access_restrictions.conf; grep -cE
+      "^\t\t[a-zA-Z_]+ *= *\…)
+  ⎿  app/models/ca_users.php
+     app/conf/user_actions.conf
+     544
+     194
+  ⎿  (another command ran in this repository at the same time; a change 
+     made by either may show under either result)
+
+  Ran 2 shell commands (ctrl+o to expand)
+⏺ Sections 02, 07 and 03 are finished. I checked two facts against the clone,
+  and both hold:
+  - can_not_login is enforced only when the app is Pawtucket
+    (ca_users.php:3399-3400).
+  - The appendix table of access_restrictions.conf keys runs to row 155,
+    matching the stated 155 keys.
+
+  I'm still waiting for the tech and screens-a workers to confirm they've
+  paused.
+
+
+⏺ Teammate @ca-finish-users-workflows finished
+  Nothing is in progress, so there is nothing to finish or save with a TODO
+  marker. All three sections (02, 07, 03) are complete, rendered and verified,
+  and I am not starting any new files.
+
+  I did not rewrite the ledgers or the report again, because they already
+  reflect the final state. Both LEDGER.md files show every file as done. That is
+  the current state, not a partial one:
+  - 02 and 07: 02/02 and 02/03 are done, and both READMEs are completed.
+  - 03: 05, 06, 07, 09, 10 and 11 are done. 01, 12 and the README are written,
+    and 02, 03, 04 and 08 were already complete. There are no missing sections.
+
+  The workflow ledger's top-line status line still says 01, 10, 12 and the
+  README are pending. That line is stale. The per-file rows are correct.
+
+  The worker report states the verification results and the open issues.
+
+  /Users/jonc/code/archival-intelligence-ai-v2-dev/reports/worker-sonnet_collect
+  iveaccess-ui-finish-users-workflows_20261030.md
+
+⏺ The users+workflows worker confirms it has stopped with nothing left open.
+  Still waiting for the tech and screens-a workers.
+
+※ recap: I'm building the CollectiveAccess UI/UX documentation set; sections 01, 02, 03, 05 and 07 are done. Once the tech and screens workers finish pausing, I'll write the low-cost RUN.md and show you its dry-run output.
+
+
+⏺ Teammate @ca-screens-a finished
+  Part A is done: the six files and 25 wireframes are written, but I had to use
+  figure numbers f04-60 to f04-63 for the batch screens, outside the f04-20 to
+  f04-59 range you gave me. Only 33 to 36 and 57 to 59 were free in that range.
+  I messaged you about it and got no reply before finishing, so please confirm
+  or renumber.
+
+  Files and figures
+
+  ┌────────────────────────────┬───────┬─────────────────────────────────────┐
+  │            File            │ Words │             Wireframes              │
+  ├────────────────────────────┼───────┼─────────────────────────────────────┤
+  │ 02-page-shell-and-login.md │ 2,203 │ F04-33 (page shell), F04-34 (six    │
+  │                            │       │ login-family screens)               │
+  ├────────────────────────────┼───────┼─────────────────────────────────────┤
+  │                            │       │ F04-35 (view and edit modes),       │
+  │ 03-dashboard.md            │ 1,949 │ F04-36 (Add a Widget panel and      │
+  │                            │       │ settings form)                      │
+  ├────────────────────────────┼───────┼─────────────────────────────────────┤
+  │ 04-record-editor.md        │ 5,610 │ F04-19 to F04-32                    │
+  ├────────────────────────────┼───────┼─────────────────────────────────────┤
+  │ 05-bundle-catalogue.md     │ 3,360 │ none; table of all 129 bundle       │
+  │                            │       │ templates                           │
+  ├────────────────────────────┼───────┼─────────────────────────────────────┤
+  │                            │       │ F04-57 (representation editor),     │
+  │ 08-media.md                │ 2,054 │ F04-58 (viewer overlay), F04-59     │
+  │                            │       │ (annotation editors)                │
+  ├────────────────────────────┼───────┼─────────────────────────────────────┤
+  │                            │       │ F04-60 (media import), F04-61       │
+  │ 09-batch.md                │ 2,547 │ (metadata import), F04-62 (batch    │
+  │                            │       │ editor), F04-63 (job states)        │
+  └────────────────────────────┴───────┴─────────────────────────────────────┘
+
+  F04-20 to F04-32 came from the earlier editor worker's generator scripts,
+  which I corrected in two places and regenerated. The callout tables and prose
+  for them are mine.
+
+  Verification
+  - render.sh: it failed with files[@]: unbound variable. The figures folder has
+    no .mmd files, so there was nothing to render. This is a script bug on an
+    empty file list, not a content failure.
+  - xmllint: all 25 SVGs passed.
+  - scripts/check.mjs: it exits 1 because of other sections. It reports no
+    failures for my six files; the only 04-section failures are README.md's
+    links to files 01 and 10 to 15.
+  - Clone: git -C /Users/jonc/code/providence status --short | wc -l printed 0.
+  - Figures and code fences: every embedded SVG resolves, and the code fences
+    are balanced.
+
+  One finding worth knowing: the Import > Data menu item requires
+  can_batch_import_media (app/conf/navigation.conf:5749), but the metadata
+  import controller requires can_batch_import_metadata
+  (MetadataImportController.php:49). I recorded this in 09-batch.md. The report
+  lists the open issues, the other findings and facts for you to spot-check.
+
+  The generators and LEDGER-A.md are in
+  /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/screens/A/.
+
+  /Users/jonc/code/archival-intelligence-ai-v2-dev/reports/worker-sonnet_collect
+  iveaccess-ui-screens-a_20261030.md
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Screens part A is finished: six files and 25 wireframes. I checked two facts
+  against the clone, and both hold:
+  - There are 129 bundle templates.
+  - The Import > Data menu item requires can_batch_import_media
+    (navigation.conf:5752), while the metadata import controller checks
+    can_batch_import_metadata (MetadataImportController.php:49). That is a real
+    permission mismatch in Providence.
+
+  Part A used f04-60–63, so part B in the spec will start at f04-64. Only the
+  tech worker hasn't confirmed its pause yet.
+
+
+⏺ Teammate @ca-screens-a finished
+  Part A is complete; nothing is partial or missing. Following your reply, I
+  renumbered the four batch figures from f04-60..63 to f04-01..04, so I no
+  longer use anything at f04-60 or above.
+
+  - Figure numbers now used: 19–36, 57–59 and 01–04. I did not use 53–55.
+  - Renumbering done: the four SVGs, their titles, the references in 09-batch.md
+    and the report all use the new numbers, and the old f04-60..63 files are
+    deleted.
+  - Rechecked after renumbering: the four new SVGs pass xmllint, and every
+    figure 09-batch.md embeds exists.
+  - Not rerun: scripts/check.mjs and the clone git status (0 before the
+    renumbering).
+  - Other verification: it is unchanged from the earlier summary, and the report
+    has the details.
+  - Ledger: LEDGER-A.md records that all six files are done and which numbers I
+    used.
+
+  Report: /Users/jonc/code/archival-intelligence-ai-v2-dev/reports/worker-sonnet
+  _collectiveaccess-ui-screens-a_20261030.md
+
+⏺ Screens part A renumbered its batch figures to f04-01–04, so f04-60 and above
+  are free for part B. Waiting on the tech worker.
+
+※ recap: We're finishing the CollectiveAccess UI/UX doc set; sections 01, 02, 03, 05, 07 and half of 04 are done. Next, once the tech worker confirms it has paused, I'll write the low-cost RUN.md spec and show you its dry run.
+
+
+⏺ Teammate @ca-finish-tech finished
+  Sections 06 and 08 are complete, and all five verification steps pass for
+  them. The one exception is node scripts/check.mjs, which exits 1 across the
+  whole repository. It reports 87 failures, none under 06 or 08.
+
+  Section 06 has 9 topic files plus the README (27,901 words) and 9 figures. I
+  wrote 01, 02, 03, 04, 08, 09 and the three specimen figures that 05 was
+  missing, and replaced the PLACEHOLDER-13 in 05. Files 06 and 07 were already
+  complete.
+
+  Section 08 has 13 topic files plus the README (33,369 words) and 18 figures. I
+  wrote 01, 02, 04, 05, 06 and 08 plus figures F08-01 to F08-05, F08-08 to
+  F08-11 and F08-13. The existing 03, 07 and 09 to 13 were complete.
+  f08-16-print-pipeline.mmd had a parse error, which I fixed. I also rendered
+  F08-16 to F08-18, whose SVGs were missing.
+
+  Verification (output is in the report):
+  - render.sh passed on both figure directories.
+  - xmllint found no bad SVG among the 27.
+  - check.mjs: 87 failures in total, 7 of them in CollectiveAccess section 04
+    (missing links in 04-screens-wireframes/README.md), the rest in other
+    competitors. I reported them and did not fix them.
+  - The clone's git status --short | wc -l printed 0.
+  - Every figure embed resolves, every .mmd has its .svg, and the code fences
+    are balanced.
+
+  Three errors from the scout notes, caught by re-reading the source and
+  corrected before finishing:
+  - Search builder controllers: 10 exist, not 12.
+  - ResultContext stores state on the user object for logged-in users, not in
+    the session.
+  - The external configuration cache is disabled by $dont_cache = true at
+    app/lib/Configuration.php:130. My first 08-caching.md said the opposite and
+    contradicted 12-configuration-loading.md.
+
+  I did not touch 09. 09-NOTES.md lists 15 candidate ADRs with evidence paths
+  and a list of defects the ADRs should treat as consequences. Its location is
+  under RAW
+  (/Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/tech/09-NOTES.md).
+
+  The report also lists the open issues (possible defects inferred from reading,
+  items that need a running instance). Findings I have not executed are marked
+  [inferred] in the docs.
+
+  /Users/jonc/code/archival-intelligence-ai-v2-dev/reports/lead-fable_collective
+  access-ui-tech_20261029.md
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Tech section is done and both checks pass: Configuration.php:130 sets
+  $dont_cache = true, and there are 10 search-builder controllers. Now I'll
+  finish section 04 part B (ADRs and integration) and write the state table and
+  RUN.md.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Write(~/code/glam-rev-eng/collectiveaccess/ui-docs/RUN.md)
+  ⎿  Wrote 124 lines to ~/code/glam-rev-eng/collectiveaccess/ui-docs/RUN.md
+       1 ---
+       2 mode: autonomous
+       3 hitl: defer
+       4 model: opus
+       5 effort: medium
+       6 ceiling: sonnet/medium
+       7 permission_mode: auto
+       8 headless: true
+       9 max_budget_usd: 60
+      10 run_dir: /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/
+     … +115 lines (~11 KB) (ctrl+o to expand)
+
+  Listed 1 directory, ran 1 shell command (ctrl+o to expand)
+
+⏺ The dry run is clean, and on a real launch claude-run copies the spec into the
+  run folder. The last step is the handoff.
+
+⏺ Skill(handoff)
+  ⎿  Successfully loaded skill · 12 tools allowed
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Write(~/code/archival-intelligence-ai-v2-dev/docs/handoffs/.draft-collectiveac
+       cess-ui-docs-low-cost-041401.md)
+  ⎿  Wrote 69 lines to ~/code/archival-intelligence-ai-v2-dev/docs/handoffs
+     /.draft-collectiveaccess-ui-docs-low-cost-041401.md
+      1 # Handoff: collectiveaccess-ui-docs-low-cost
+      2 - **Written:** 2026-10-30 04:14 EDT  **Session:** c43c75a6-73b1-4
+        1bd-aed6-cf8b10618bd7 (started in the clone `/Users/jonc/code/pro
+        vidence`)
+      3 - **Agent:** claude  **Stream:** main  **Continues:** 2026-10-30_
+        0345_collectiveaccess-ui-design-docs-checkpoint3-claude.md
+      4 - **Status:** the UI docs set is about 85% done; the low-cost RUN
+        .md is written and passes its dry run; waiting for the user to la
+        unch `claude-run`.
+      5 - **Branch:** main  **HEAD:** d8e3d5c Sync working tree (Jons-Mac
+     … +65 lines (~7 KB) (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The remaining work is set up as a low-cost run you launch with claude-run, and
+  I've stopped there as the prompt asked. The set is about 85% done.
+
+  Where it stands:
+  - Finished: sections 00, 01, 02, 03, 05, 06, 07 and 08.
+  - Section 04 (screens): files 02–09 are done, with 41 wireframes. Still
+    missing:
+    - the topic files 01 and 10–15;
+    - the screen-map figure;
+    - the section README. Its links to the missing files are the only 7
+      check.mjs failures under collectiveaccess/.
+  - Section 09 (ADRs): only a skeleton. The 15 candidate decisions are in
+    tech/09-NOTES.md.
+  - Top-level README: missing.
+
+  I checked two facts from each worker's report against the clone, and all held.
+  All workers are idle. The clone has no changes, and nothing is committed.
+
+  The spec is at /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/RUN.md:
+
+  mode: autonomous
+  hitl: defer
+  model: opus
+  effort: medium
+  ceiling: sonnet/medium
+  permission_mode: auto
+  headless: true
+  max_budget_usd: 60
+  run_dir: /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/run-20261030
+
+  It follows the ArchivesSpace example:
+  - Order of work:
+    a. Section 04 part B, as four worker-sonnet workers (manage, administrate,
+       preferences with library/logs/statistics, then components with the
+       screen-state matrix), at most 3 at once.
+    b. The scripted screen inventory, the screen-map figure and the 04 README.
+    c. Up to 12 ADRs.
+    d. The top-level README with a generated figure index, then the final
+       checks.
+  - Caps:
+    - about 400 words per section;
+    - at most 3 new source files per section;
+    - inventories built by script;
+    - at most 12 new generated wireframes, in a fixed priority order;
+    - anything else listed as "Not covered".
+  - Figure numbers: pre-assigned to each worker, so nothing collides with the
+    numbers already used.
+  - Corrections to carry forward:
+    - "Administration" is nested under the Manage menu, not a top-level menu;
+    - the Import > Data menu item and its controller check different
+      permissions;
+    - the configuration cache is disabled.
+  - Boundaries: no clone writes, no commits, no settings or CLAUDE.md edits.
+    Output is REPORT.md, QUESTIONS.md and DECISIONS.md in the run folder.
+
+  The state table it starts from is run-20261030/STATE.md.
+
+  claude-run RUN.md --dry-run output:
+  claude-run: {'RUN_MODE': 'autonomous', 'RUN_HITL': 'defer', 'RUN_DIR': 
+  '/Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/run-20261030', 
+  'AGENT_TIER_CEILING': 'sonnet/medium'} 
+  cwd=/Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs supervise=False 
+  resume=None
+  claude-run: claude --model opus --effort medium --permission-mode auto -p Read
+  the run spec 
+  /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/run-20261030/RUN.md and
+  carry it out to comp... --output-format stream-json --verbose 
+  --max-budget-usd 60
+  On a real launch it copies the spec into the run folder first.
+
+  To launch: cd ~/code/glam-rev-eng/collectiveaccess/ui-docs && claude-run 
+  RUN.md, or add --until-done to have it restarted until done.
+
+  Handoff written: 
+  docs/handoffs/2026-10-30_0414_collectiveaccess-ui-docs-low-cost-claude.md  (69
+  lines)
+  Working tree: 332 uncommitted files (app repo, all sessions)   HEAD: d8e3d5c 
+  Sync working tree (Jons-MacBook-Pro-7, 2026-10-29)
+  Recommended commit? no: the set is unfinished and you launch the run first; 
+  commit when you ask
+  Next: /clear collectiveaccess-ui-docs-low-cost
+  Then: /handoff-load 
+  2026-10-30_0414_collectiveaccess-ui-docs-low-cost-claude.md
+
+
+⏺ Teammate @ca-finish-tech finished
+  Nothing is in progress, so there is nothing to finish or render. Both sections
+  are complete and the report is already written.
+
+  - Section 06: all 9 topic files and the README are done, with 9 figures.
+  - Section 08: all 13 topic files and the README are done, with 18 figures. All
+    SVGs are rendered and valid.
+  - LEDGER.md:
+    /Users/jonc/code/glam-rev-eng/collectiveaccess/ui-docs/tech/LEDGER.md is
+    current. Every 06 and 08 row is done, 09-NOTES.md is done, and the lead
+    report is done. The only stale part is the old subagent table left over from
+    the stopped run.
+  - Section 09: I did not touch it. It is pending with the other worker, and
+    09-NOTES.md is the handover.
+  - Verification: the five steps were run and passed for 06 and 08. node 
+    scripts/check.mjs still exits 1 for the whole repository (87 failures), none
+    under 06 or 08. The clone git status is empty.
+
+  I am starting no new files.
+
+  /Users/jonc/code/archival-intelligence-ai-v2-dev/reports/lead-fable_collective
+  access-ui-tech_20261029.md
+
+⏺ The tech worker has confirmed it is stopped, so nothing is running now.
+  Sections 06 and 08 were already finished before the pause. The spec in
+  ~/code/glam-rev-eng/collectiveaccess/ui-docs/RUN.md is ready for you to launch
+  with claude-run RUN.md.
+
+※ recap: The CollectiveAccess UI/UX documentation set is about 85% done; screens, ADRs and the top-level README remain, set up as a low-cost run that passed its dry run. Next, launch it: `cd ~/code/glam-rev-eng/collectiveaccess/ui-docs && claude-run RUN.md`.
+
+❯ /export                                                                       
+  ⎿  Conversation exported to: /Users/jonc/code/providence/2026-10-30-202139-is-
+     the-glam-produce-in-this-providence-subdir-co.txt
+
+❯ /exit                                                                         
+
+❯ are there any background tasks running? give status update                    
+
+  Ran 4 shell commands (ctrl+o to expand)
+⏺ Bash(cd ~/code/providence;
+      T=/Users/jonc/code/archival-intelligence-ai-v2-dev/transcripts; for f in
+      2026-10-30-202134-1-this-is-a-competitor-subdir-repo-my-app-subdi…)
+  ⎿  .rw-r--r--@  97k jonc 30 Oct 20:21 2026-10-30-202134-1-this-is-a-compe
+     titor-subdir-repo-my-app-subdi.txt
+     .rw-r--r--@  56k jonc 30 Oct 20:21 2026-10-30-202139-is-the-glam-produ
+     … +2 lines (ctrl+o to expand)
+  ⎿  2 files changed (binary, mode only or too large to show)
+
+⏺ Nothing for CollectiveAccess is running in the background. The low-cost run
+  you launched started at 05:39 this morning, finished at 06:11 with exit code
+  0, and its own done checks pass.
+
+  What the run finished:
+  - Section 04 (screens): the seven missing topic files, 12 new generated
+    wireframes, a screen-map figure and a completed README.
+  - Section 09: 12 ADRs (423–522 words each), with an index README and an
+    ADR-to-component figure.
+  - Top-level README.md: reading order, section index and an index of all 179
+    figures.
+
+  I re-ran the final checks just now:
+  - node scripts/check.mjs passes for the whole repository: 0 failures, none
+    under collectiveaccess/.
+  - The Providence clone has no changes.
+
+  Its report says every figure is embedded, none is missing, and every Mermaid
+  source has its SVG.
+
+  Two things the run noted:
+  - Three workers opened more Providence files than the spec's limit of three
+    per section, to check line numbers. They only read, so the clone stayed
+    clean.
+  - Some sections run 10–30% over the ~400-word cap.
+
+  Two questions it left for you (run-20261030/QUESTIONS.md), each with a default
+  already applied:
+  - Q1: seven lines quote Providence source comments that contain "TODO", so a
+    plain grep TODO still finds them. It kept them word for word; the
+    alternative is to paraphrase them.
+  - Q2: ADR 12 has one sentence comparing Providence with our own ADR-023. It
+    kept the sentence; the alternative is to delete it so the ADRs cover
+    Providence only.
+
+  Housekeeping: your two /export transcripts had landed in the Providence clone.
+  I moved both to the app repo's transcripts/, names unchanged, so the clone is
+  clean again. One of them (…202134-1-this-is-a-competitor-subdir…) is from the
+  other Providence session.
+
+  Nothing is committed. The full report is
+  ~/code/glam-rev-eng/collectiveaccess/ui-docs/run-20261030/REPORT.md. It also
+  lists what was cut, such as wireframes for six secondary screens, which appear
+  as "Not covered" in the section READMEs.
+
+  The other background processes on this machine belong to other projects: two
+  Rijksmuseum/Yale LUX runs and the ArchivesSpace supervisor.
